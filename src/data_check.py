@@ -11,7 +11,7 @@ font_prop = fm.FontProperties(fname=font_path)
 plt.rcParams['font.family'] = font_prop.get_name()
 
 # CSVの読み込み（エンコーディング調整）
-df = pd.read_csv("stock_price.csv", encoding="utf-8", parse_dates=["日付け"], index_col="日付け")
+df = pd.read_csv("./resources/stock_price.csv", encoding="utf-8", parse_dates=["日付け"], index_col="日付け")
 
 # データの前処理
 df["変化率 %"] = df["変化率 %"].str.replace("%", "").astype(float)  # 変化率を数値化
